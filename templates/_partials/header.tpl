@@ -27,19 +27,28 @@
 	<div class="container">
         
 		{*<div class="hidden-sm-down">*}
-			<div class="left-nav">
-				{hook h='displayNav1'}
+			<div class="hidden-sm-down left-nav">
+				{hook h='displayNav1' mod='ps_languageselector'}
 			</div>
-			
-			<div class="right-nav">
-				{hook h='displayNav2'}
+			<div class="hidden-md-up left-nav">
+				{hook h='displayNav1' mod='ps_mainmenu'}
 			</div>
+			<div class="hidden-sm-down right-nav">
+				{hook h='displayNav2' mod='ps_customersignin'}
+			</div>
+			<div class="hidden-md-up right-nav">
+				{hook h='displayNav2' mod='ps_shoppingcart'}
+			</div>
+			<div class="mobile-logo hidden-md-up">
+					<a href="{$urls.base_url}">
+					<img class="logo img-responsive" src="{$shop.logo}" alt="{$shop.name}">
+					</a>
+				</div>
 		{*</div>*}
 		
-		{*<div class="hidden-md-up text-xs-center mobile">
+		{*<div class="hidden-md-up text-xs-left mobile">
 			<div class="pull-xs-left" id="menu-icon">
 				<i class="material-icons menu-open">&#xE5D2;</i>
-				<i class="material-icons menu-close">&#xE5CD;</i>			  
 			</div>
 			<div class="pull-xs-right" id="_mobile_cart"></div>
 			<div class="pull-xs-right" id="_mobile_user_info"></div>
@@ -53,17 +62,28 @@
 
 {block name='header_top'}
 	<div class="header-top">
-		<div class="container">
-			<div class="header_logo">
-				<a href="{$urls.base_url}">
-				<img class="logo img-responsive" src="{$shop.logo}" alt="{$shop.name}">
-				</a>
+		<div class="container-header">
+			<div class="container">
+				<div class="header_logo hidden-sm-down">
+					<a href="{$urls.base_url}">
+					<img class="logo img-responsive" src="{$shop.logo}" alt="{$shop.name}">
+					</a>
+				</div>
+				<div class="hidden-sm-down">
+					{hook h='displayTop' mod='ps_shoppingcart'}
+				</div>	
+				<div>{hook h='displayTop' mod='ps_searchbar'} </div>
 			</div>
-			{hook h='displayTop'}					
-		</div>
-		
-		<div class="container">
-			{hook h='displayNavFullWidth'}
 		</div>
 	</div>	
+{/block}
+
+{block name='header_menu'}
+	<div class="hidden-sm-down header-menu">
+		<div class="container-categories">
+			<div class="container">
+				<div>{hook h='displayNavFullWidth' mod='ps_mainmenu'}</div>
+			</div>
+		</div>
+	</div>
 {/block}

@@ -69,14 +69,15 @@ global_settings:
     modules_to_hook:
       displayNav1:
         - ps_languageselector
-        - ps_currencyselector
+        - ps_mainmenu
       displayNav2:
         - ps_customersignin
-        - ps_searchbar
-      displayNavFullWidth:
-        - ps_mainmenu
         - ps_shoppingcart
       displayTop:
+        - ps_searchbar
+        - ps_shoppingcart
+      displayNavFullWidth:
+        - ps_mainmenu
         - cz_headercmsblock
       displayTopColumn:
         - cz_imageslider
@@ -90,9 +91,9 @@ global_settings:
       displayHome:
         - cz_servicecmsblock
         - cz_specials
-        - cz_brandlogo
-        - cz_testimonialcmsblock
-        - cz_instagramblock
+       # - cz_brandlogo
+       # - cz_testimonialcmsblock
+       # - cz_instagramblock
       displayFooterBefore:
         - ps_emailsubscription
       displayFooter:

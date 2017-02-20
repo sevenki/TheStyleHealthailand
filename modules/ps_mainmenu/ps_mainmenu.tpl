@@ -45,15 +45,20 @@
 
 <div class="text-xs-left mobile hidden-lg-up mobile-menu">
 	<div class="menu-icon">
-		<div class="cat-title">{l s='Categories' d='Shop.Theme'}</div>		  
+		<div class="hidden-sm-down cat-title">{l s='Categories' d='Shop.Theme'}</div>	
+    <div class="hidden-md-up cat-title">
+      <i class="material-icons menu-open">&#xE5D2;</i>    
+    </div>
+
 	</div>
 	
 	<div id="mobile_top_menu_wrapper" class="row hidden-lg-up">
 		<div class="mobile-menu-inner">
 			<div class="menu-icon">
-				<div class="cat-title">{l s='Categories' d='Shop.Theme'}</div>		  
+        <i class="closer-mobile-menu" id="closer_mobile_menu"></i>
 			</div>
 			<div class="js-top-menu mobile" id="_mobile_top_menu"></div>
+      <div>{hook h='displayTop' mod='ps_searchbar'} </div>
 		</div>
 	</div>
 </div>
