@@ -38,7 +38,7 @@
   .header-top {
       .search-widget {
           width: 400px;
-          padding: 18px 14px;
+          padding: 16px 14px 0px 14px;
        form {
         button[type="submit"] {
           &:before{ color: #000 }
@@ -53,7 +53,7 @@
   .header-top {
     .search-widget {
       width: 600px;
-      padding: 18px 30px 18px 0px;
+      padding: 8px 30px 8px 0px;
       float: none; 
     }
   }
@@ -63,7 +63,6 @@
 @include media-breakpoint-down(xs) {
   .header-top {
     .search-widget {
-      width: 100px;
       width: 100%;
       padding: 8px 0px;
       float: none; 

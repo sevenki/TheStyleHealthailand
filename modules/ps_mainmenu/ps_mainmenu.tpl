@@ -54,11 +54,22 @@
 	
 	<div id="mobile_top_menu_wrapper" class="row hidden-lg-up">
 		<div class="mobile-menu-inner">
-			<div class="menu-icon">
-        <i class="closer-mobile-menu" id="closer_mobile_menu"></i>
-			</div>
+      <div class="menu-container">
+  			<div class="menu-icon">
+            <i class="material-icons menu-open">&#xE5D2;</i>    
+            <i class="closer-mobile-menu" id="closer_mobile_menu"></i>
+        </div>
+        <div class="header-icons search-menu-mobile"> 
+            {hook h='displayTop' mod='ps_searchbar'} 
+        </div>
+      </div>
 			<div class="js-top-menu mobile" id="_mobile_top_menu"></div>
-      <div>{hook h='displayTop' mod='ps_searchbar'} </div>
+      <div class="language_selector_mobile_menu">
+        {hook h='displayNav1' mod='ps_languageselector'}
+      </div>
+      <div class="customer_signin_mobile_menu">
+        {hook h='displayNav2' mod='ps_customersignin'}
+      </div>
 		</div>
 	</div>
 </div>

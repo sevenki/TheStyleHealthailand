@@ -26,7 +26,7 @@
 
 {block name='page_content_container'}
 <section id="content" class="page-home">
-	<div class="container"> 
+	<div class="container container-mobile"> 
 		{block name='page_content_top'}{/block}
 		{hook h='displayTopColumn'}
 	</div>

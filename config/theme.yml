@@ -73,6 +73,7 @@ global_settings:
       displayNav2:
         - ps_customersignin
         - ps_shoppingcart
+        - kbmarketplace
       displayTop:
         - ps_searchbar
         - ps_shoppingcart

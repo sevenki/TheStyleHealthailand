@@ -5,7 +5,7 @@
 		 
 		<a rel="nofollow" href="{$cart_url}" {if $cart.products_count > 0} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"{/if}>
 			<i class="material-icons shopping-cart">shopping_cart</i>
-			<div class="cart-products-count">{$cart.products_count}</div>
+			<div class="cart-products-count hidden-sm-down">{$cart.products_count}</div>
 		</a>
 		 
 		
@@ -102,7 +102,14 @@
 			  </div>
 			  
 			  <div class="checkout card-block">
-				 
+			    <div class="cart-brief-link">
+            <div class="cart-image">
+              <a rel="nofollow" href="{$cart_url}" {if $cart.products_count > 0} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"{/if}>
+                <i class="material-icons shopping-cart">shopping_cart</i>
+              </a>
+            </div>
+          </div>
+
 				  {if $cart.minimalPurchaseRequired}			
 					<button type="button" class="btn btn-primary disabled" disabled>{l s='Checkout' d='Shop.Theme.Actions'}</button>					
 				  {else}

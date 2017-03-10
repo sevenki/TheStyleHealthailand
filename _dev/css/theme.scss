@@ -26,7 +26,9 @@
 @import "components/customization-modal";
 
 
-
+input:focus {
+	outline:none !important;
+}
 /*** HEADER ***/
 #index #header { 
 	border-bottom: 0px; 
@@ -34,7 +36,7 @@
 #header {
   background: #FFFFFF;
   .header_logo {
-		padding: 28px 0;
+		padding: 24px 0;
 		float: left;
 		height: 40px;
 	}
@@ -79,6 +81,7 @@
 		padding: 10px 10px;
 	}
 	.right-nav {
+		display:inline-block;
 		float: right;    
 	}	
 
@@ -87,7 +90,7 @@
 	  white-space: nowrap;
 	  display: inline-block;
 	  .expand-more{
-	  		color: $navbar-text-color;
+	  		color: #282228;
 	  }
 	  .dropdown-arrow{
 	  	&:before{
@@ -97,10 +100,6 @@
 			padding-left: 3px;
 		}
 	  }
-	  .expand-more { 
-	  		padding: 15px 0px 15px 0px;
-	        color: #282228;
-        }
 	  &.dropdown:hover{
 	  	.expand-more, .dropdown-arrow:before{
 			text-decoration: none;
@@ -124,7 +123,7 @@
     }
     .material-icons {
       line-height: 22px;
-	  font-size: 20px;
+	  font-size: 24px;
 	  &.expand-more {
         margin-left: -3px;
       }
@@ -140,6 +139,7 @@
   }
   	.container-categories {
       border-bottom: $gray-light 1px solid;
+      height: 48px;
     }
 
     .container-header {
@@ -225,7 +225,7 @@
 			.shopping-cart {
 				width: 52px;
 				height: 40px;
-				color:white;
+				color: white;
 				padding-left: 14px;
 			}
 
@@ -454,12 +454,6 @@
     max-width: 100%;
   }
   #header 
-    .header-nav {
-		height: 56px;
-		.container {
-			height: 56px;
-		}
-	}
   .logo {
     width: 200px;
     height: 30px;
@@ -496,14 +490,11 @@
     padding-bottom: 0;
   }
 	#header{
-		.header-nav {
-			height: 35px;
-		}
 		.header-top{
 			padding-bottom: 0px; 
 			height: 76px;
 			.header_logo{ 
-				padding: 18px 0;
+				padding: 24px 0;
 			}
 		    .container-header {
 		      border-bottom: $gray-light 1px solid;
@@ -520,6 +511,8 @@
 		}
 		.cart_block{ top: 36px; }
 		.blockcart{
+		    margin-top: 16px;
+
 			.material-icons.shopping-cart{
 				display:  inline-block;
 			}
@@ -564,21 +557,12 @@
   }
   #header {
 	.header-nav {
+		height: 56px;
 		border-bottom: 1px solid $base-border-color;
 		background-color: #ffffff;
-      	.mobile-logo {
-	      	float: left;
-	        line-height: 35px;
-	        vertical-align: middle;
-	        margin: 0 auto;
-	        a {
-	          img {
-	            height: 24px;
-	            width: 100px;
-	            margin-left: 200px;
-	            background: url(../img/logoTop.png) no-repeat;
-	          }
-	        }
+      	.top-logo {
+	      	text-align: center;
+	      	padding: 13px 0px;
       	}
       .right-nav {
       }
@@ -594,27 +578,32 @@
         background: inherit;
 	    height: 24px;
 	    width: 24px;
-	    padding: 0px 0px;
+	    padding: 16px 0px;
 	    .blockcart-header {
 	    	margin: 0px 0px;
 	    	padding: 0px 0px;
 	    	.shopping-cart{
 	    		padding: 0px 0px;
-	    		.material-icons { color: #b535a5;}
+	    		color: #b535a5;
+	    		.material-icons { 
+				    font-size: 24px;
+    			}
 	    	}
 	    }
       }
     }
     .header-top {
     	background-color: #eeedee;
-    	height: 76px;
+    	height: 56px;
       	padding-bottom: 0;
 		padding-top:0px;
 		padding-bottom:10px;
-      a[data-depth="0"] {
-      }
+		.container-header{ height: 56px; container { height: 56px;}}
     }
   }
+	.container-mobile {
+        padding: 0px 0px !important;
+   }
   section.checkout-step {
     width: 100%;
   }
@@ -665,6 +654,7 @@
 			.header-cms-block{ display: none; }
 		}	
 		.header-nav {
+			height: 56px;
 			.mobile-logo {
 		      	float: left;
 		        line-height: 35px;
@@ -684,22 +674,11 @@
 			  font-size: 24px;
 	       }
 		}	  
-		.blockcart {
-		    height: 24px;
-		    width: 24px;
-		    background: #b535a5;
-		    .blockcart-header {
-		    	margin: 0px 0px;
-		    	padding: 0px 0px;
-		    	.shopping-cart{
-		    		.material-icons { color: #b535a5;}
-		    	}
-		    }
-    	}
-		.cart_block{ width: 270px; }
 		.search-widget .search_toggle{ width: 280px; right: -45px; padding: 0 0;}
 	}
-	
+  .container-mobile {
+        padding: 0px 0px !important;
+   }
 	.products-sort-order .dropdown-menu{width: 90%;}
 	#contact-link .callus{ display: none; }
 	.products-section-title{ font-size: 25px;}

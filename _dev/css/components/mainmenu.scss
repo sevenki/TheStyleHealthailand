@@ -40,7 +40,8 @@
 		}
 		.menu-close,
 		&.active .menu-open{
-			display: none;
+			/*display: none;*/
+			float:left;
 		}
 		.menu-open,
 		&.active .menu-close{
@@ -50,6 +51,7 @@
 	.header-menu{
 		.menu {
 			padding-left: 0px;
+			height: 48px;
 		}
 	}
 }
@@ -58,11 +60,9 @@
 	position: relative;
 	padding: 0;
 	width: auto;
+	height: 48px;
 	margin: 0;
     display: flex;
-	.category {
-		padding: 0 10px 0 0;
-	}
   .more_sub_menu {
   	a{
 		margin-left: 20px;
@@ -87,7 +87,7 @@
   }
   a.dropdown-item {
   	padding:0px;
-  	height: 48px;
+  	height: 28px;
   	padding: 12px 0px;
   }
   a[data-depth="0"] {
@@ -154,6 +154,9 @@
   .popover {
     max-width: inherit;
   }
+  .category {
+    padding: 0px 20px 0 0;
+  }
 }
 .popover.bs-tether-element-attached-top {
   margin-top: 0;
@@ -188,7 +191,7 @@
       height: 20px;
     }
     a[data-depth="0"] {
-      padding: 3px 0 3px 5px;
+      padding: 0px 0 0px 16px;
     }
     .collapse {
       display: none;
@@ -264,14 +267,18 @@
   	&.mobile{
 		background: #FFF;
 	}
+	.top-menu {
+		display: inline;
+	}
   }
+
   .mobile-menu-inner{
 		position: fixed;
 		top: 0px;
 		left: -100%;
-		background: #FFF;
+		background: white;
 		z-index: 5;
-		padding: 5px 10px 10px;
+		padding: 0px 0px 10px 0px;
 		margin-left: 0px;
 		width: 300px;
 		height: 100%;
@@ -280,20 +287,54 @@
 		border: 1px solid $base-border-color;
 		@include box-shadow(0 8px 15px 0 rgba(0, 0, 0, 0.1));
 		@include transition(all 0.3s ease);
-		.menu-icon {border-bottom: 1px solid $base-border-color;}
+	    background-color: #ffffff;
+	    .menu-container {
+	    	background-color: #ededed;
+	    }
+		.menu-icon {
+			display: inline-block;
+			border-bottom: 1px solid $base-border-color;
+		    background-color: #ededed;
+	        width: 100%;
+            margin-bottom: 16px;
+            padding: 10px 10px 0 10px;
+			.header-icons {
+				padding: 10px 15px;
+			}
+		    .closer-mobile-menu {
+		        float: right;
+		        height: 24px;
+		        width: 24px;
+		        background: url(../img/closeMenuIcon.png) no-repeat;
+		    }
+		}
+		.search-menu-mobile {
+		    width: 100%;
+    		padding: 30px 10px 0px 10px;
+    		.search-widget {
+			    padding: 0 0 15px 0px;
+    		}
+		}
+  	.header-top-mobile {
+  		height: 64px;
+		.menu-icon {
+			float:right;
+		}
+  	}
   }
-    .closer-mobile-menu {
-        float: right;
-        height: 24px;
-        width: 24px;
-        background-image: url(../img/closeMenuIcon.png);
 
-      }
   &.slide{
   	.mobile-menu-inner{
 		left: 0;
 		@include transition(all 0.3s ease);
 	}
+  }
+  .language_selector_mobile_menu {
+  	padding: 0 0 0 10px;
+  }
+  .customer_signin_mobile_menu {
+  	float: left;
+  	padding: 0 0 0 10px;
   }
 }
 
@@ -389,6 +430,11 @@
 					position: relative;
 				}
 			}
+		    display: inline;
+	    	.category {
+				padding: 10px 10px 10px 0;
+			    border-bottom: 1px solid #eeedee;
+			}
 		}
 		.menu-icon{
 			.cat-title{
@@ -450,6 +496,39 @@
 		border-bottom: 1px solid #ddd;
 		@include transition(all 0.3s ease);
 		@include box-shadow(0 0px 2px 1px rgba(0, 0, 0, 0.1));
+	}
+}
+
+@include media-breakpoint-down(sm){    
+	#header{
+		.js-top-menu {
+			.top-menu {
+		    	.category {
+		    		height: 48px;
+					padding: 12px 0;
+				    border-bottom: 1px solid #eeedee;
+				}
+			}
+		}
+		.cat-title{ 
+			padding: 16px 0px;
+		}
+	}
+}
+
+@include media-breakpoint-down(xs){    
+	#header{
+		.js-top-menu {
+			.top-menu {
+		    	.category {
+					padding: 10px 10px 10px 0;
+				    border-bottom: 1px solid #eeedee;
+				}
+			}
+		}
+		.cat-title{ 
+			padding: 16px 0px;
+		}
 	}
 }
 

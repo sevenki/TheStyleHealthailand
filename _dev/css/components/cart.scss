@@ -192,6 +192,11 @@
   }
 }
 
+#_mobile_cart {
+  .blockcart {
+    margin: 0px !important;
+    }
+}
 /*** Responsive part ***/
 @include media-breakpoint-down(sm) {
   .product-line-grid-body {
